@@ -1,0 +1,58 @@
+SIX Participant,Peering Contact,Website,AS Number,AS Set,Routeserver,Peering policy
+ACS,hodan@acs.sk,http://www.acs.sk,12905,AS-ACSSK,true,open
+Antik,zilla@antik.sk,http://www.antik.sk,42841,AS-ANTIK,true,open
+BENESTRA,ipcore@benestra.sk,http://www.benestra.sk,5578,AS-BENESTRA,true,open
+BONET,peter.mihalik@bonet.sk,http://web.bonet.sk/,44185,AS-BONET-SIX,true,open
+Carisma,peto.nagy@gimpnet.sk,http://www.internito.sk,204948,AS204948,true,open
+CNC,techsup@cnc.sk,http://www.cnc.sk,50128,AS-CNC-CUSTOMERS,true,open
+ComSource,ales.lednej@comsource.cz,http://www.comsource.cz,199803,AS199803,false,
+Coolhousing,noc@coolhousing.net,http://www.coolhousing.net/,35592,AS-COOLHOUSING,true,open
+DataNetworks,noc@datanetworks.sk,http://www.datanetworks.sk,48326,AS-DATANETWORKS,true,open
+Detronics,peering@detronics.sk,http://www.detronics.sk,56656,AS56656,true,open
+Dial Telecom,peering@dialtelecom.cz,http://www.dialtelecom.cz,29208,AS-DIALTELECOM-SIX,false,
+DIGI,six@digislovakia.sk,http://www.digislovakia.sk,49044,AS49044,false,
+DSi data,peering.sk@dsidata.sk,http://www.dsidata.sk/,35328,AS35328,false,
+E-max,levkut@e-max.sk,http://www.e-max.sk,49115,AS-EMAX,true,open
+Energotel,loncek@energotel.sk,http://www.energotel.sk/,31117,AS-ENERGOTEL,true,open
+GeCom,geci@gecom.sk,http://www.gecom.sk,51947,AS-GECOM,true,open
+GOLEMTECH,obchod@golemtech.sk,http://www.golemtech.sk/,30929,AS-GOLEMTECH-SIX,true,open
+GOVNET,govnet@nases.gov.sk,http://www.nases.gov.sk,25373,AS25373,true,open
+ha-vel,servis@ha-vel.sk,http://www.ha-vel.cz,15935,AS-HA-VEL-SKSIX,true,open
+Internet SK,six@forpsi.com,http://www.internet-sk.sk,24806,AS-INTERNETCZ,false,
+Interoute,ixp-ops@interoute.com,http://www.interoute.com,8928,AS-INTEROUTE,false,
+IOPS,otcenas@iops.sk,http://www.iops.sk,64488,AS64488,true,open
+IP-Net,pato@ip-net.eu,http://www.ip-net.eu/,56349,AS-IP-NET,true,open
+ISPER,isper@isper.sk,http://www.isper.sk,43248,AS43248,true,open
+Itself,noc@itself.cz,http://www.itself.cz,12570,AS-CZECHBONE,true,open
+KINET,klucha@kinet.sk,http://www.kinet.sk,57760,AS57760,true,open
+KOMNET,info@komnet.sk,http://www.komnet.sk,56926,AS56926,true,open
+KONFER,admin@konfer.sk,http://www.konfer.sk,50953,AS-KONFER,true,open
+Last Mile,ip@lastmile.sk,http://www.lastmile.sk,56800,AS56800,true,open
+Liberty,mslavkovsky@upc.sk,http://www.upc.sk/,6830,AS-AORTA,false,
+LightStorm,airborne@lightstorm.sk,http://www.lightstorm.sk,42005,AS-LIGHTSTORM,true,open
+Marlink,peering.sk@marlink.com,http://www.marlink.com,8264,AS8264,false,
+Master Int.,noc@master.cz,http://www.master.cz,24971,AS-MASTERCZ-SKSIX,true,open
+MAXnetwork,stevo@maxnet.sk,http://www.maxnetwork.sk,205168,as-sk-maxnetwork-1,true,open
+O2,peering@o2bs.sk,http://www.o2.sk,28952,AS28952,true,open
+Orange,attila.miklos@orange.sk,http://www.orange.sk/,15962,AS-OSK-DNI,true,open
+pegonet,artur.majcinik@pegonet.sk,http://www.pegonet.sk,43653,AS-PEGONET,true,open
+Radiokomunikace,peering@radiokomunikace.cz,http://www.radiokomunikace.cz,25248,AS-BLUETONE-CUST,false,
+RadioLAN,admin@radiolan.sk,http://www.radiolan.sk,43451,AS43451,true,open
+Rainside,bartos@rainside.sk,http://www.rainside.sk/,12508,AS12508,true,open
+Regiotel,info@w-net.sk,http://www.regiotel.sk,49460,AS-Filleck,true,open
+SA,milan@sasro.sk,http://www.sasro.sk/,21019,AS21019,true,open
+Salamon,viktor.safar@salamon.sk,http://www.salamon.sk,16367,AS16367,false,
+SANET,md@bts.sk,http://www.sanet.sk/,2607,AS-SANET-SIX,true,open
+SATRO,six@satro.sk,http://www.satro.sk,31127,AS31127,true,open
+SLOVANET,vargovic@slovanet.net,http://www.slovanet.sk/,8778,AS-SLOVANET,true,open
+SMART Comp,ncc@netbox.cz,http://www.sc.cz,31246,AS-NETBOX-SK-SIX,false,
+Specure,info@specure.com,http://www.specure.com,206055,AS206055,true,open
+SWAN,six@swan.sk,http://www.swan.sk/,16160,AS-SWAN,true,open
+Tel2Tel,mark.uszov@tel2tel.org,http://mcntele.com,59949,AS59949,true,open
+Telekom,sixpeering@telekom.sk,http://www.t-com.sk/,6855,AS-SLOVAK,false,
+TEMPEST,matus_kozak@tempest.sk,http://www.tempest.sk/,8620,AS8620,false,
+TMCZ,zdenek.roubicek@t-mobile.cz,http://www.t-mobile.cz,5588,AS-GTS-CE,false,
+TRESTEL,support@trestel.sk,http://www.trestel.sk,38949,AS38949,false,
+Türk TI SK,peering@euroweb.ro,http://www.turktelekomint.com/,6663,AS-TTI,true,open
+VNET,noc@vnet.sk,http://www.vnet.sk,29405,AS-VNET,true,open
+ŽSR-ŽT,machan.milan@zsr.sk,http://www.zt.sk/,25496,AS-SET-ZT,true,open
