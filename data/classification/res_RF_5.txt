@@ -1,0 +1,73 @@
+Dataset Lenght:  731917
+Dataset Shape:  (731917, 7)
+Dataset:     0                 1  2    3    4  5  6
+0  U   103.25.156.0/24  1  0.0  0.0  0  5
+1  U  103.255.140.0/22  1  0.0  0.0  0  5
+2  U  103.255.140.0/23  1  0.0  0.0  0  5
+3  U   103.29.197.0/24  1  0.0  0.0  0  5
+4  U    103.36.96.0/22  1  0.0  0.0  0  5
+Results Using Gini Index:
+Predicted values:
+['U' 'U' 'U' ..., 'U' 'U' 'U']
+Confusion Matrix:  [[  1162    136]
+ [    75 240160]]
+Accuracy :  99.9126413368
+Report :               precision    recall  f1-score   support
+
+          A       0.94      0.90      0.92      1298
+          U       1.00      1.00      1.00    240235
+
+avg / total       1.00      1.00      1.00    241533
+
+0.939369442199 0.895223420647 0.916765285996
+0.999434031361 0.99968780569 0.999560902418
+Results Using Entropy:
+Predicted values:
+['U' 'U' 'U' ..., 'U' 'U' 'U']
+Confusion Matrix:  [[  1157    141]
+ [    77 240158]]
+Accuracy :  99.9097431821
+Report :               precision    recall  f1-score   support
+
+          A       0.94      0.89      0.91      1298
+          U       1.00      1.00      1.00    240235
+
+avg / total       1.00      1.00      1.00    241533
+
+0.937601296596 0.891371340524 0.913902053712
+0.999413231016 0.999679480509 0.999546338032
+Predicted values:
+['U' 'U' 'U' ..., 'U' 'U' 'U']
+Confusion Matrix:  [[  3527    380]
+ [   238 727772]]
+Accuracy :  99.9155641965
+Report :               precision    recall  f1-score   support
+
+          A       0.94      0.90      0.92      3907
+          U       1.00      1.00      1.00    728010
+
+avg / total       1.00      1.00      1.00    731917
+
+0.936786188579 0.902738674175 0.91944734098
+0.99947813094 0.999673081414 0.999575596671
+Predicted values:
+['U' 'U' 'U' ..., 'U' 'U' 'U']
+Confusion Matrix:  [[  3521    386]
+ [   234 727776]]
+Accuracy :  99.9152909415
+Report :               precision    recall  f1-score   support
+
+          A       0.94      0.90      0.92      3907
+          U       1.00      1.00      1.00    728010
+
+avg / total       1.00      1.00      1.00    731917
+
+0.937683089214 0.90120296903 0.919081179849
+0.999469898182 0.999678575844 0.999574226122
+
+
+------------------
+(program exited with code: 0)
+Press return to continue
+
+
