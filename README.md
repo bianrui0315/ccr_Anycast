@@ -49,4 +49,4 @@ our approach achieves high classification accuracy, about 90\% for anycast and 9
 - traceroute_prefix_ip_path.txt: atlas exp results IP path(results of atlas experiments)
 - traceroute_prefix_asn_pyasn.txt: atlas exp results ASN path(AS mapping the results of last file)
 
-Due to limit of size, we didn't include large files like BGP data, which can be downloaded from RouteView/RIPE NCC, or retrieved from CAIDA's [BGPStream](https://bgpstream.caida.org/). If you need those files to reproduce your results, we have included the method in our paper and feel free to contact me by email (bianrui@udel.edu).
+Due to limit of size, we didn't include large files like BGP data, which can be downloaded from RouteView/RIPE NCC, or retrieved from CAIDA's [BGPStream](https://bgpstream.caida.org/). If you need those files to reproduce your results, we have included the method in our paper and feel free to contact us by email (bianrui@udel.edu).
