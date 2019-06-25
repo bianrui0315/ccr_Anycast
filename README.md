@@ -22,7 +22,7 @@ our approach achieves high classification accuracy, about 90\% for anycast and 9
 - `randomforest_save_results`: classification using random forest algorithm
 
 ## data
-### classification
+### Passive Anycast Detection
 - `anycast_2017_uniq.txt`: (near-)Ground truth of anycast prefix (coNEXT paper)
 - `as_distance`: AS distance from RIS and RoutViews
 - `datasets`: datasets  using features N, P1, P2, MD, MLfor classification
@@ -35,7 +35,7 @@ prefix in groundtruth|prefix in BGP|origin AS|number of orgin AS|number of upstr
 - `res_DT_5.txt`: results of decision tree classification
 - `res_RF_5.txt`: results of random forest classification
 
-### remote peering
+### Remote Peering Data/Experiments
 - `Anycast-data-UMD`: Anycast experiment data from University of Maryland (SIGCOMM'18 paper)
 - `asn_ixp`: IXP member ASN and remote peering AS(IXP member ASN from IXP websites, remote peering AS provided by the author of IMC'18 remote peering paper)
 - `aspair_ixp`: AS pair of IXP member and remote peering IP(made based on the last file)
