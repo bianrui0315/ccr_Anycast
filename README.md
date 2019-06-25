@@ -36,13 +36,13 @@ prefix in groundtruth|prefix in BGP|origin AS|number of orgin AS|number of upstr
 - `res_RF_5.txt`: results of random forest classification
 
 ### Remote Peering Data/Experiments
-- `Anycast-data-UMD`: Anycast experiment data from University of Maryland (SIGCOMM'18 paper)
-- `asn_ixp`: IXP member ASN and remote peering AS(IXP member ASN from IXP websites, remote peering AS provided by the author of IMC'18 remote peering paper)
-- `aspair_ixp`: AS pair of IXP member and remote peering IP(made based on the last file)
-- `IXP_members`: IXP member ASN(from IXP websites)
-- `rp_in_ixp`: BGP searching results of remote peering(using AS pairs to search in anycast prefix BGP records)
-- `anycast_2017_uniq.txt`: (near-)Ground truth of anycast prefix (coNEXT paper)
-- `atlas_exp_prefix_msmid.txt`: measurement ID of RIPE Atlas(from atlas experiments)
+- `Anycast-data-UMD`: Anycast experiment data from University of Maryland's [D-Root Nameserver](http://www.cs.umd.edu/projects/droot/) ([SIGCOMM'18 paper](http://www.cs.umd.edu/projects/droot/anycast_sigcomm18.pdf))
+- `IXP_members`: IXP member ASNs collected from IXP websites)
+- `asn_ixp`: IXP member ASNs and remote peering ASes (IXP member ASN collected from IXP websites; remote peering AS data from [IMC'18 remote peering paper](https://www.inspire.edu.gr/wp-content/pdfs/uncovering_remote_peering_interconnections_v1.pdf))
+- `aspair_ixp`: AS pair of IXP member and remote peering IP (extracted from `IXP_members` and `asn_ixp`)
+- `rp_in_ixp`: BGP searching results of remote peering (using AS pairs to search in anycast prefix BGP records)
+- `anycast_2017_uniq.txt`: (near-)Ground truth of anycast prefixes from [Anycast enumeration](https://anycast.telecom-paristech.fr/) ([CoNEXT'15 paper](https://conferences2.sigcomm.org/co-next/2015/img/papers/conext15-final100.pdf))
+- `atlas_exp_prefix_msmid.txt`: Measurement ID of [RIPE Atlas](https://atlas.ripe.net/)
 - `find_rp_ip_in_traceroute_stat.txt`: searching remote ip in ip path of atlas exp and show the number of ixp that remote ip belong with(from Altas experiments and data provided by the author of IMC'18 remote peering paper)
 - `find_rp_ip_in_traceroute.txt`: searching remote ip in ip path of atlas exp and show the ixp that remote ip belong with(from Altas experiments and data provided by the author of IMC'18 remote peering paper)
 - `inferences_all.txt`: information including local and remote peering(provided by the author of IMC'18 remote peering paper)
