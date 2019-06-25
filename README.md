@@ -20,7 +20,7 @@ our approach achieves high classification accuracy, about 90\% for anycast and 9
 - extract_asrelation_distance.py: process raw BGP file, get the distance of AS
 - process_anycast_to_get_complete_data.py: process BGP data get BGP features
 - process_data_mulway_ris.py: Process raw BGP data, get origin AS and upstream AS, and list the distance of upstream AS for each prefix
-- process_unicast_to_get_complete_data.py: # process unicast prefix BGP data get BGP features
+- process_unicast_to_get_complete_data.py: process unicast prefix BGP data get BGP features
 - randomforest_save_results: classification using random forest algorithm
 
 ## data
