@@ -1,11 +1,9 @@
 # Towards Passive Analysis of Anycast in Global Routing: Unintended Impact of Remote Peering
 
 
-```
-Towards Passive Analysis of Anycast in Global Routing: Unintended Impact of Remote Peering,
-Rui Bian, Shuai Hao, Haining Wang, Amogh Dhamdere, Alberto Dainotti, and Chase Cotton.
-ACM SIGCOMM Computer Communication Review (CCR), Volume 49 Issue 3, July 2019.
-```
+> **Towards Passive Analysis of Anycast in Global Routing: Unintended Impact of Remote Peering**,<br>
+> Rui Bian, Shuai Hao, Haining Wang, Amogh Dhamdere, Alberto Dainotti, and Chase Cotton.<br>
+> ACM SIGCOMM Computer Communication Review (CCR), Volume 49 Issue 3, July 2019.
 
 
 We developed a passive method to study IP anycast by utilizing BGP data.
