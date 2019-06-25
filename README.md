@@ -1,5 +1,13 @@
 # Towards Passive Analysis of Anycast in Global Routing: Unintended Impact of Remote Peering
 
+
+```
+Towards Passive Analysis of Anycast in Global Routing: Unintended Impact of Remote Peering,
+Rui Bian, Shuai Hao, Haining Wang, Amogh Dhamdere, Alberto Dainotti, and Chase Cotton.
+ACM SIGCOMM Computer Communication Review (CCR), Volume 49 Issue 3, July 2019.
+```
+
+
 We developed a passive method to study IP anycast by utilizing BGP data.
 We proposed a set of BGP-related features to classify anycast and unicast prefixes. Using the datasets collected from RouteViews and RIPE RIS, we evaluated the effectiveness of our proposed approach. The evaluation results show that 
 our approach achieves high classification accuracy, about 90\% for anycast and 99\% for unicast. While further delving into the causes of inaccuracy, we found that remote peering has an unintended impact on anycast routing.  In our study, 19.2\% of anycast prefixes are sensitive to remote peering and around 40\% of such prefixes are further confirmed to be impacted by remote peering via traceroute measurements. 
