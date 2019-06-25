@@ -19,10 +19,10 @@ our approach achieves high classification accuracy, about 90\% for anycast and 9
 ### classification
 - anycast_2017_uniq.txt: (near-)Ground truth of anycast prefix (coNEXT paper)
 - as_distance: AS distance from RIS and RoutViews
-- datasets*: datasets for classification
-- full_results_anycast.txt: anycast prefixes' feature data, format is `prefix in groundtruth|prefix in BGP|origin AS|number of orgin AS|number of upstream AS|number of collectors|number of upstream AS pairs|number of upstream AS pairs whose distance above 1|number of upstream AS pairs whose distance above 2| Percentage of upstream AS pairs whose distance is more than 1|Percentage of upstream AS pairs whose distance is more than 2|maximum distance between upstream ASes| minimum of distance between upstream ASes| mean of distance| standard deviation of distance|maximum length of AS paths|minimum of length of AS paths|mean of length of AS paths| standard deviation of length of AS paths`
+- datasets*: datasets  using features N, P1, P2, MD, MLfor classification
+- full_results_anycast.txt: anycast prefixes' feature data, format is `prefix in groundtruth|prefix in BGP|origin AS|number of orgin AS|number of upstream AS (N)|number of collectors|number of upstream AS pairs|number of upstream AS pairs whose distance above 1|number of upstream AS pairs whose distance above 2| Percentage of upstream AS pairs whose distance is more than 1 (P1)|Percentage of upstream AS pairs whose distance is more than 2 (P2)|maximum distance between upstream ASes (MD)| minimum of distance between upstream ASes| mean of distance| standard deviation of distance|maximum length of AS paths (ML)|minimum of length of AS paths|mean of length of AS paths| standard deviation of length of AS paths`
 - full_results_unicast.txt: unicast prefixes' feature data, format is same as full_results_anycast.txt
-- full_results_all.txt: all prefixes' feature data
+- full_results_all.txt: all prefixes' feature data, format is same as full_results_anycast.txt expect no prefix in groundtruth column
 - res_DT_5.txt: results of decision tree classification
 - res_RF_5.txt: results of random forest classification
 
