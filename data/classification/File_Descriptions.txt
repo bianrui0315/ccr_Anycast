@@ -1,0 +1,10 @@
+Descriptions
+
+anycast_2017_uniq.txt: (near-)Ground truth of anycast prefix (coNEXT paper)
+as_distance: AS distance from RIS and RoutViews
+datasets*: datasets for classification
+full_results_anycast.txt: anycast prefixes' feature data
+full_results_unicast.txt: unicast prefixes' feature data
+full_results_all.txt: all prefixes' feature data
+res_DT_5.txt: results of decision tree classification
+res_RF_5.txt: results of random forest classification
