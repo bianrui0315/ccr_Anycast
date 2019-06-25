@@ -15,5 +15,3 @@ inferences_remote.txt: remote peering information(provided by the author of IMC'
 traceroute_prefix_ip_path.txt: atlas exp results IP path(results of atlas experiments)
 traceroute_prefix_asn_pyasn.txt: atlas exp results ASN path(AS mapping the results of last file)
 
-
-We check the remote peering IP in IP path of RIPE atlas experiments and check if remote peering IP in more than 2 IXP. We find all remote peering IP belong to one IXP. I also manually check the IXP which the path traverse in RIPE atlas websites and check if the IXP is matching the IXP which remote peering IP belong to. I check that most are matched but I don't leave the results. 
