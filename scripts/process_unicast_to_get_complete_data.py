@@ -143,7 +143,7 @@ index_all=0
 start=0
 end=10000
 block=''
-with open('unicast_MulSAS_24prefix.txt') as g:
+with open('unicast_24prefix.txt') as g:
     for line in g:
         if '*' in line:
             block+=line
@@ -162,5 +162,5 @@ with open('unicast_MulSAS_24prefix.txt') as g:
         else:
             block+=line
 
-with open('full_results_unicast_MulSAS.txt','w') as haha:
+with open('full_results_unicast.txt','w') as haha:
 	haha.write(text)
