@@ -47,7 +47,5 @@ prefix in groundtruth|prefix in BGP|origin AS|number of orgin AS|number of upstr
 - `inferences_remote.txt`: remote peering information from IMC'18 remote peering paper
 - `traceroute_prefix_ip_path.txt`: traceroute results from RIPE Atlas experiments
 - `traceroute_prefix_asn_pyasn.txt`: ASN paths from RIPE Atlas experiments
-- `find_rp_ip_in_traceroute_stat.txt`: searching remote IPs in traceroutes results from Atlas and showing the number of IXPs that remote IP belong with (from Altas experiments and data provided by the author of IMC'18 remote peering paper)
-- `find_rp_ip_in_traceroute.txt`: searching remote ip in ip path of atlas exp and show the ixp that remote ip belong with (from Altas experiments and data provided by the author of IMC'18 remote peering paper)
 
 Due to limit of size, we didn't include large files like BGP data, which can be downloaded from RouteView/RIPE NCC, or retrieved from CAIDA's [BGPStream](https://bgpstream.caida.org/). If you need those files to reproduce your results, we have included the method in our paper and feel free to contact us by email (bianrui@udel.edu).
