@@ -8,4 +8,4 @@ process_data_mulway_ris.py: Process raw BGP data, get origin AS and upstream AS,
 process_unicast_to_get_complete_data.py: # process unicast prefix BGP data get BGP features
 randomforest_save_results: classification using random forest algorithm
 
-Due to limit of size, we cannot publish large files like BGP files. If you need those files to reproduce your results, we have included the method in our paper and you can contact me by email (bianrui@udel.edu).
+Due to limit of size, we didn't include large files like BGP data, which can be downloaded from RouteView/RIPE NCC, or retrieved from CAIDA's BGPStream. If you need those files to reproduce your results, we have included the method in our paper and feel free to contact us by email (bianrui@udel.edu).

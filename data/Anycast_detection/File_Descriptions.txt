@@ -10,4 +10,4 @@ res_DT_5.txt: results of decision tree classification
 res_RF_5.txt: results of random forest classification
 
 
-Due to limit of size, we cannot publish large files like BGP files. If you need those files to reproduce your results, we have included the method in our paper and you can contact me by email (bianrui@udel.edu).
+Due to limit of size, we didn't include large files like BGP data, which can be downloaded from RouteView/RIPE NCC, or retrieved from CAIDA's BGPStream. If you need those files to reproduce your results, we have included the method in our paper and feel free to contact us by email (bianrui@udel.edu).
