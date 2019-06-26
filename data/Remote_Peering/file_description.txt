@@ -3,7 +3,6 @@ Descriptions
 Anycast-data-UMD: Anycast experiment data from University of Maryland (SIGCOMM'18 paper)
 asn_ixp: IXP member ASN and remote peering AS(IXP member ASN from IXP websites, remote peering AS provided by the author of IMC'18 remote peering paper)
 aspair_ixp: AS pair of IXP member and remote peering IP(made based on the last file)
-IXP_members: IXP member ASN(from IXP websites)
 rp_in_ixp: BGP searching results of remote peering(using AS pairs to search in anycast prefix BGP records)
 anycast_2017_uniq.txt: (near-)Ground truth of anycast prefix (coNEXT paper)
 atlas_exp_prefix_msmid.txt: measurement ID of RIPE Atlas(from atlas experiments)
