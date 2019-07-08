@@ -1,0 +1,33 @@
+%!TEX root = main_acm.tex
+
+\section{Introduction}\label{sec:intro}
+
+IP anycast is widely used in modern Content Delivery Networks (CDNs)~\cite{Calder:2015}, Domain Name
+System (DNS)~\cite{fan2013,moura2016anycast},
+and Distributed Denial of Service (DDoS) protections~\cite{moura2016anycast}. 
+With anycast, the same IP address(es) is announced from multiple locations, and the Border Gateway Protocol (BGP) is responsible for directing clients to the site that is the ``closest'' to them on the basis of ``best routing'' (i.e., AS path), providing reduced latency and improved availability to end-users.
+
+In recent years, researchers have conducted studies to understand and
+characterize anycast from various angles, such as its adoption~\cite{cicalese2015characterizing} or the efficiency in particular services like DNS~\cite{li2018internet}.
+Due to the insufficient distinctions between unicast and anycast from the perspective of a routing table, the common method to identify anycast addresses is through {\it active} Internet-wide measurements.
+Cicalese \emph{et al.}~\cite{cicalese2015characterizing, cicalese2015fistful} studied the enumeration and city-level geolocation of anycast prefixes by using latency measurements based on the detection of speed-of-light violations. 
+However, the latency of ping may not always reliably reflect the geographic
+distance of two IP addresses~\cite{pam02, Zhang:2005}. Also, active probing requires the use of many vantage points to achieve the necessary coverage.
+
+To overcome these limitations, in this work, we explore a passive approach to
+identify and characterize IP anycast by leveraging BGP routing information.
+Specifically, we propose and analyze a set of BGP-related features to classify
+anycast and unicast prefixes, and utilize simple classifiers to train and
+predict anycast prefixes on the Internet. The results demonstrate that our
+passive approach, without requiring probing, can achieve 90\% accuracy.
+Furthermore, we delve into the instances misclassified by our approach to find the
+root causes of inaccuracy.
+
+The two major assumptions of our approach are that (1) anycast prefixes may have more upstream autonomous systems (ASes) than unicast prefixes, as anycast is announced from multiple physical locations and peering with transit providers at different places, and (2) the distance between such upstream ASes will be topologically larger than that in the scenarios of unicast prefixes (i.e., more hops in AS paths), as some of them are geographically distant from others. However, in our false positives, we also find some unicast prefixes falling into such a category. Through a deeper analysis, we identify that many of these cases involve {\it remote peering}~\cite{castro2014remote, Nomikos18}. 
+ 
+Remote peering allows a network to peer at an Internet exchange point (IXP) without a physical presence within the IXP's infrastructure, either over a long cable or over IXP's reseller partners that provide IXP layer-2 access. Remote peering enables the fast deployment of connectivity to an IXP and reduces cost. However, it also brings unintended impact on global routing due to its invisibility at layer-3, breaking the assumption that the peered autonomous systems are physically close and provide a short path for transporting traffic. As such, we investigate the impact of remote peering on anycast routing by using passive methods and validate our analysis through traceroute results. 
+
+
+The remainder of this paper is organized as follows. We introduce the background of anycast and remote peering \S \ref{sec:back}. We present our methodology to identify anycast prefixes in \S\ref{sec:meth}. We investigate inaccuracies in our method in \S\ref{sec:inaccu} and the impact of remote peering on anycast routing in \S\ref{sec:rp}. We survey related work in \S\ref{sec:rel} and conclude the paper in \S\ref{sec:con}.
+
+

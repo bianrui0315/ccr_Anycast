@@ -1,0 +1,132 @@
+ \documentclass[sigconf]{acmart}
+\usepackage{booktabs} % For formal tables
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{epstopdf}
+\usepackage{secdot}
+\sectiondot{section}
+\usepackage{caption}
+\usepackage{booktabs}
+\captionsetup{skip=2pt}
+\usepackage{subcaption}
+\usepackage{framed}
+%\usepackage[font=small,skip=0pt]{caption}
+\usepackage[referable]{threeparttablex}
+\usepackage{multirow,array}
+\usepackage{color}
+
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+
+\def\UrlBreaks{\do\/\do-}
+\renewcommand{\UrlBreaks}{\do\/\do-\do:\do_\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z}
+
+% Disable / remove copyright boxes
+\setcopyright{none}
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+% Increase margin between text and footer
+\setlength{\footskip}{20pt}
+
+% Add CCR footer
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+   \fancyhf{} %
+   \fancyfoot[L]{ACM SIGCOMM Computer Communication Review}%
+   \fancyfoot[R]{Volume 49 Issue 3, July 2019}%
+}
+\pagestyle{plain}
+% Add CCR footer on first page
+\fancypagestyle{firstpagestyle}{%
+   \fancyhf{} %
+   \fancyfoot[L]{ACM SIGCOMM Computer Communication Review}%
+   \fancyfoot[R]{Volume 49 Issue 3, July 2019}%
+}
+\usepackage{balance}
+
+\begin{document}
+\title{Towards Passive Analysis of Anycast in Global Routing: Unintended Impact of Remote Peering}
+
+\author{Rui Bian}
+\affiliation{
+	\institution{University of Delaware}
+}\email{bianrui@udel.edu}
+
+\author{Shuai Hao}
+\affiliation{
+	\institution{CAIDA / UC San Diego}
+}\email{haos@caida.org}
+
+\author{Haining Wang}
+\affiliation{
+	\institution{University of Delaware}
+}\email{hnw@udel.edu}
+
+\author{Amogh Dhamdere}
+\affiliation{
+	\institution{CAIDA / UC San Diego}
+}\email{amogh@caida.org}
+
+\author{Alberto Dainotti}
+\affiliation{
+	\institution{CAIDA / UC San Diego}
+}\email{alberto@caida.org}
+
+\author{Chase Cotton}
+\affiliation{
+	\institution{University of Delaware}
+}\email{ccotton@udel.edu}
+
+\include{0_abstract}
+
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10003033.10003039.10003045.10003046</concept_id>
+<concept_desc>Networks~Routing protocols</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10003033.10003099.10003104</concept_id>
+<concept_desc>Networks~Network management</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+<concept>
+<concept_id>10003033.10003106.10010924</concept_id>
+<concept_desc>Networks~Public Internet</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Networks~Routing protocols}
+\ccsdesc[300]{Networks~Network management}
+\ccsdesc[300]{Networks~Public Internet}
+
+\keywords{Internet Routing, Anycast, Peering, Remote Peering}
+
+\maketitle
+
+\input{1_introduction}
+\input{2_background}
+\input{3_methodology}
+\input{4_inaccuracy}
+\input{5_remotepeering}
+\input{6_relatedwork}
+\input{7_conclusion}
+
+\begin{acks}
+We would like to thank our Editor, Olivier Bonaventure, as well as Ignacio Castro and the anonymous reviewers for their insightful comments. We would also like to thank Vasileios Giotsas and Dave Levin for sharing their datasets. This work was supported by National Science Foundation grants CNS-1618117, CNS-1705024, and DGE-1821744.
+This material is also based on research sponsored by Air Force Research Laboratory under agreement number FA8750-18-2-0049. The U.S. Government is authorized to reproduce and distribute reprints for Governmental purposes notwithstanding any copyright notation thereon. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of Air Force Research Laboratory or the U.S. Government.
+\end{acks}
+
+\bibliographystyle{ACM-Reference-Format}
+%\bibliographystyle{abbrv}
+\bibliography{bibliography}
+
+\end{document}
+

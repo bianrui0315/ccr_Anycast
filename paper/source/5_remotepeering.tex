@@ -1,0 +1,127 @@
+%!TEX root = main_acm.tex
+
+\section{Remote Peering in Anycast Routing}
+\label{sec:rp}
+The inspection of false positives suggests that remote peering might introduce unintended impact on path selection due to its invisibility at layer-3, where the direct (remote) peering at IXPs leads the local traffic to a distant location. Such a case is especially a disservice to anycast when some clients are directed to a sub-optimal replica. In this section, we attempt to identify the anycast prefixes that could be impacted by remote peering. We retrieve paths (i) towards anycast prefixes and (ii) potentially containing remote peering instances, and we validate those paths through RIPE Atlas measurements. We then perform latency measurements and present specific case studies to illustrate the practical impact of remote peering on anycast routing.
+
+\subsection{Identifying Remote Peering in Anycast}
+\label{sub:idRP}
+We leverage the remote peering data from a publicly available dataset, the Remote IXP Peering Observatory \cite{RPJedi}, in which remote peering instances have been identified in 26 large IXPs worldwide.
+To identify BGP paths potentially involving remote peering, first we construct
+AS pairs that are connected through remote peering. We do so by pairing ASNs 
+that according to \cite{RPJedi} are connected through remote peering
+at an IXP ($AS_{rp}$), with the member ASNs ($AS_{mem}$)
+obtained from the same IXP's website: $RP$-$AS$ $\to$ ($AS_{rp}$, $AS_{mem}$). 
+We then search for such pairs in all AS paths towards anycast prefixes.\footnote{Here we use the near-ground-truth dataset (which is more conservative in labeling prefixes as anycast).} If there is any such pair appearing in the AS path of an anycast prefix, we label this prefix as potentially affected by remote peering. 
+
+The datasets and results are shown in Table~\ref{tab_remote_data}. In all large IXPs of Europe (AMS-IX, CATNIX, DEC-IX Frankfurt, FranceIX and LINX), remote peering has the potential to affect more than 10\% of anycast prefixes. In total, there are 19.2\% (751/3,907) of anycast prefixes potentially impacted by remote peering.
+
+\subsection{Path Collection}
+To collect more information on anycast paths potentially affected by remote peering and further understand its practical impact, we conduct active measurements using the RIPE Atlas platform~\cite{RIPE_Atlas}. We select RIPE Atlas probes from the ASes that (i) host a BGP monitor and (ii) observe anycast routing paths, and perform traceroutes from the probes to the first address of anycast prefixes that are potentially affected by remote peering (\S\ref{sub:idRP}).
+On average, we use 10.3 probes to traceroute a prefix. We parse the traceroute results to map each IP address to its ASN in order to obtain AS paths. Next, we look for remote peering AS pairs in these AS paths. If found, we collect and label them as paths towards prefixes potentially affected by remote peering. 
+
+Table \ref{tab_remote_data} lists details for ASes and anycast prefixes involved
+in remote peering at each IXP for which we have remote peering
+data~\cite{RPJedi}. In total, we collect 1,013 AS pairs that are involved in
+remote peering from 26 IXPs. We find that 751 anycast prefixes (19.2\% of total
+anycast prefixes) are reached through BGP paths that include an RP-AS pair, and
+we successfully traceroute 688 of them.  Since two ASes labeled as a RP-AS pair
+could also peer locally at other IXPs, we then use the
+traIXroute~\cite{traixroute, traixroute:pam} open-source tool to identify the
+IXP crossings in the traceroutes towards these 688 prefixes, looking for IXPs
+where the remote peering actually occurs. This way, we are able to confirm that
+293 of these anycast prefixes are actually affected by remote peering, since
+both the RP-AS pairs and the corresponding IXPs are detected in traceroutes.
+
+We are not able to draw conclusions for the remaining 458 prefixes (out of 751), because
+(1) some destination IP addresses are not reachable, (2) some intermediate IP addresses have no matching ASNs, and  (3) traIXroute~\cite{traixroute} does not include data from all IXPs where the remote peering instances have been detected. Even though these limitations lower the validation rates, we still find a significant portion of anycast prefixes that are reached through paths involving remote peering, which provides a lower bound for this phenomenon.
+
+\begin{table}[t]
+\caption{Datasets of Remote Peering. {\normalfont ({\sf \#RP}: the number of ASes involving remote peering collected from \cite{RPJedi}; {\sf \#mem-AS}: the number of IXP member ASes;  {\sf \#RP-AS}: the number of remote peering AS pairs collected from BGP information;  {\sf \#RP-Any}: the number of anycast prefixes with remote peering AS pairs (RP-AS); {\sf \%RP-Any}: percentage of anycast prefixes with RP-AS in total anycast prefixes; {\sf \#m-pfx}: the number of anycast prefixes that include RP-AS pairs in BGP paths and that can be reached by traceroute; {\sf \#v-pfx}: the number of prefixes where we validated RP-AS through traceroute.)}}
+\label{tab_remote_data}
+\renewcommand{\arraystretch}{1.1}
+\begin{center}
+\footnotesize
+\begin{threeparttable}
+\begin{tabular}{| p{1.2cm} p{0.6cm} p{0.6cm} p{0.7cm} | p{0.6cm} p{0.6cm} | p{0.6cm} p{0.6cm} |}
+\hline
+\multicolumn{1}{|c}{IXP} & {\Small\sf \#RP} & \tabincell{c}{\Small\sf \#mem\\[-1pt]-AS} & \tabincell{l}{\Small\sf \#RP\\[-1pt]-AS} & \tabincell{c}{\Small\sf {\bf \#}RP\\[-1pt]-Any} & \tabincell{c}{\Small\sf {\bf \%}RP\\[-1pt]-Any} & \tabincell{c}{\Small\sf \#m-\\[-1pt]pfx} & \tabincell{c}{\Small\sf \#v-\\[-1pt]pfx} \\[3pt]
+\hline
+AMS-IX & 355 & 821 & 758 & 608 & 15.83 & 545 & 165 \\
+BIX & 9 & 65 & 1 & 1 & 0.026 & 1& 0 \\
+BIX.BG  & 17 & 79 &  0 & 0 & 0 & -& -\\
+CABASE{\textsuperscript{\dag}}  & 15 & 71 & 0  & 0 & 0 & -& -\\
+CATNIX & 9 & 42 & 7 & 568 & 14.78 & 568 & 5 \\
+DE-CIX Fr{\textsuperscript{\ddag}} & 367 & 826 & 383 & 520 & 13.53 & 520 & 182 \\
+FICIX  & 4 &  34 & 3 & 35 & 0.91 & 35 & 0 \\
+France-IX{\textsuperscript{$\natural$}}  & 118 & 369 & 147 & 388 & 10.10 & 326 & 71 \\
+HKIX & 46 & 288 & 15 & 85 & 2.21 & 85 & 38 \\
+IIX  & 92 & 222 & 0 & 0 & 0 & -& -\\
+INEX  & 11 & 101 &0 & 0 & 0 &- & -\\
+QLD-IX  & 4 & 81 & 2 & 31 & 0.81 &31 & 31 \\
+IX Man{\textsuperscript{$\sharp$}} & 12 & 95 & 5 & 65 & 1.69 & 65 & 0 \\
+LINX LON1 & 151 & 787 & 224  & 511 & 13.30 & 511 & 140 \\
+LINX NoVA & 9 & 45 & 5 & 36 & 0.94 & 36 & 0 \\
+LONAP & 13 & 200& 13 & 83 & 2.16 & 83 & 60\\
+MIX-IT  & 49 & 241 & 26& 237 & 6.17 & 237 & 43 \\
+NIX.CZ & 32 & 152 & 17 & 66 & 1.71 & 66 & 0 \\
+SGIX& 8 & 96 & 0 & 0 & 0 & -& -\\
+SIX.SK & 4 & 57 & 0 & 0 & 0 &-& -\\
+SwissIX  & 48 & 185 & 78 & 135 & 3.51 & 147 & 91 \\
+Thinx  & 29 & 183 & 2 & 9 & 0.23 & 9 & 0 \\
+TPIX & 33 & 220 &0 & 0 & 0 & -& -\\
+TPIX-TW & 4 & 41 & 1 & 6 & 0.16 & 6 & 0 \\ 
+UA-IX  & 38 & 189 & 0 & 0 & 0 & -& -\\
+VIX & 32 & 140 &  17 &  97 & 2.52 & 97 & 30\\
+\hline
+Total\textsuperscript{\P}  & 1,075 & 3,377 & 1,013 &  751 & 19.2 & 688 & 293 \\
+\hline
+\end{tabular}
+\begin{tablenotes}
+{\SMALL
+      \item {{\textsuperscript{\dag}CABASE-BUE-IX Argentina; \ } {\textsuperscript{\ddag}DE-CIX Frankfurt; \ } {\textsuperscript{$\natural$}France-IX Paris; \ } {\textsuperscript{$\sharp$}IX Manchester}}
+      \item {\textsuperscript{\P}We remove the duplicated prefixes.}}
+\end{tablenotes}
+%\vspace{-3pt}
+\end{threeparttable}
+\end{center}
+\end{table}
+
+\subsection{Impact of Remote Peering: Performance Analysis and Case Study}
+Leveraging the traceroute experiments we used in \S3.2, we study the impact of remote peering by analyzing the performance and route selection in real-world case studies.
+
+\vspace{3pt}
+\textbf{Performance Analysis and Case Study.}
+To quantify the performance impact of remote peering on anycast path selection, 
+we measure the round-trip time (RTT) to each
+anycast prefix from the same measurements collected in \S5.2. Among the
+successful traceroutes, we find that 38\% (126/332) of RTTs in traceroutes
+towards anycast prefixes potentially affected by remote peering are larger than
+the average RTT of prefixes without remote peering.
+In these 126 traceroute probes, the average RTT towards prefixes potentially affected by remote peering is 119.7 ms while the average RTT of the other prefixes is 84.7 ms. An average latency increase of 35.1 ms. 
+
+In a concrete example, we traceroute to the IP address of the DNS D-root from a probe located in Singapore.
+Ideally, we expect that our traceroute can reach the D-root instance in Singapore~\cite{RootDNS}.
+However, we found that the traceroute goes to Europe via AMS-IX and through
+remote peering, and reach another D-root server in Amsterdam, Netherlands, with a 158 ms RTT. Consequently, remote peering not only can affect performance, but it may also impact traffic engineering or load balancing, potentially routing traffic through to unintended locations.
+
+%\textbf{Case Study.} We then provide concrete cases from the path collection experiments to illustrate practical impact. For example, we found that for a traceroute-targeted IP address \texttt{\small 103.245.222.1} (i.e., the first address of the anycast prefix \texttt{\small 103.245.222.0/24}),
+%located in @@@@IS IT UNICAST INSTEAD??@@@@ Frankfurt, Germany, the traceroute from one of our probes in Eastern US (Ashburn, VA) first went to San Jose, CA in Western US, then traveled to Hong Kong, and finally arrived in Frankfurt, Germany. This happened because a remote peering AS pair at DECIX, AS3491 and AS2914, produced a short AS path but it routed traffic through geographically distant locations, while actually shorter routes (but appearing as longer AS paths) were announced. Note that this case is similar to the impact of remote peering on unicast.
+
+%Consequently, we can see that remote peering can affect the route selection and performance as well as traffic engineering and load balancing, potentially routing traffic through to unintended locations. 
+
+\vspace{3pt}
+\textbf{DNS Root Sever Anycast Data}. 
+We conduct an extensive study using a dataset of traceroutes towards anycast addresses provided by University of Maryland (UMD)~\cite{UMD_anycast}, which includes  traceroute data from selected probes to C-, D- and K-DNS root server sites. By searching for IPs/ASes involving remote peering in  paths towards such anycast addresses, we identify remote peering in D and K root server traces. Specifically, we find remote peering instances located in AMS-IX and DECIX from D-root experiments, and SIX.SK, FranceIX Paris, AMS-IX and Linx from K-root experiments.
+These results are consistent with our previous results in \S5.2. 
+
+Also in the UMD dataset, we find specific cases where remote peering affects
+anycast routing by taking traffic on geographically-long routes. For example, we
+observed that traceroutes from probes in Eastern Russia were routed to
+Netherlands and Germany, respectively, through routes with remote peering, while
+there are root DNS server instances in Hong Kong and Tokyo. These cases confirm
+the observations from Li et al. in~\cite{li2018internet}, in which the same
+dataset has been used to study the inefficiency of anycast path selection, and
+explain the reason why some users cannot reach the optimal DNS root sites
+(although the work from Li et al. does not mention remote peering among potential causes).
+

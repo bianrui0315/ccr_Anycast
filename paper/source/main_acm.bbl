@@ -1,0 +1,421 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{34}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{??}{ccr}{2019}]%
+        {ccr_anycast}
+ \bibinfo{year}{2019}\natexlab{}.
+\newblock
+  \bibinfo{howpublished}{\url{https://github.com/bianrui0315/ccr_Anycast}}.
+  (\bibinfo{year}{2019}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Abley and Lindqvist}{Abley and
+  Lindqvist}{2006}]%
+        {abley2006operation}
+\bibfield{author}{\bibinfo{person}{Joe Abley} {and} \bibinfo{person}{Kurt~Erik
+  Lindqvist}.} \bibinfo{year}{2006}\natexlab{}.
+\newblock \bibinfo{title}{{Operation of Anycast Services}}.
+\newblock \bibinfo{howpublished}{RFC 4786}.   (\bibinfo{year}{2006}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{Anycast Enumeration and Geolocation
+  Dataset}}{{Anycast Enumeration and Geolocation Dataset}}{2017}]%
+        {DarioAnycastData}
+\bibfield{author}{\bibinfo{person}{{Anycast Enumeration and Geolocation
+  Dataset}}.} \bibinfo{year}{2015-2017}\natexlab{}.
+\newblock
+  \bibinfo{howpublished}{\url{https://anycast.telecom-paristech.fr/dataset/}}.
+   (\bibinfo{year}{2015-2017}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{C.~J.~Bovy and Mieghem}{C.~J.~Bovy and
+  Mieghem}{2002}]%
+        {pam02}
+\bibfield{author}{\bibinfo{person}{G.~Hooghiemstra H.~Uijterwaal C.~J.~Bovy, H.
+  T.~Metrodimedjo} {and} \bibinfo{person}{P.~Van Mieghem}.}
+  \bibinfo{year}{2002}\natexlab{}.
+\newblock \showarticletitle{Analysis of End-to-end Delay Measurements in
+  Internet}. In \bibinfo{booktitle}{\emph{Passive and Active Network
+  Measurement (PAM)}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{CAIDA AS Relationships Dataset}}{{CAIDA AS
+  Relationships Dataset}}{2018}]%
+        {as-rel}
+\bibfield{author}{\bibinfo{person}{{CAIDA AS Relationships Dataset}}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock
+  \bibinfo{howpublished}{\url{http://www.caida.org/data/as-relationships/}}.
+  (\bibinfo{year}{2018}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Calder, Flavel, Katz-Bassett, Mahajan, and
+  Padhye}{Calder et~al\mbox{.}}{2015}]%
+        {Calder:2015}
+\bibfield{author}{\bibinfo{person}{Matt Calder}, \bibinfo{person}{Ashley
+  Flavel}, \bibinfo{person}{Ethan Katz-Bassett}, \bibinfo{person}{Ratul
+  Mahajan}, {and} \bibinfo{person}{Jitendra Padhye}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{{Analyzing the Performance of an Anycast CDN}}. In
+  \bibinfo{booktitle}{\emph{ACM Internet Measurement Conference (IMC)}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Castro, Cardona, Gorinsky, and
+  Francois}{Castro et~al\mbox{.}}{2014}]%
+        {castro2014remote}
+\bibfield{author}{\bibinfo{person}{Ignacio Castro},
+  \bibinfo{person}{Juan~Camilo Cardona}, \bibinfo{person}{Sergey Gorinsky},
+  {and} \bibinfo{person}{Pierre Francois}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{{Remote Peering: More Peering without Internet
+  Flattening}}. In \bibinfo{booktitle}{\emph{ACM Conference on emerging
+  Networking EXperiments and Technologies (CoNEXT)}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Cicalese, Aug{\'e}, Joumblatt, Friedman, and
+  Rossi}{Cicalese et~al\mbox{.}}{2015a}]%
+        {cicalese2015characterizing}
+\bibfield{author}{\bibinfo{person}{Danilo Cicalese}, \bibinfo{person}{Jordan
+  Aug{\'e}}, \bibinfo{person}{Diana Joumblatt}, \bibinfo{person}{Timur
+  Friedman}, {and} \bibinfo{person}{D Rossi}.}
+  \bibinfo{year}{2015}\natexlab{a}.
+\newblock \showarticletitle{{Characterizing IPv4 Anycast Adoption and
+  Deployment}}. In \bibinfo{booktitle}{\emph{ACM Conference on emerging
+  Networking EXperiments and Technologies (CoNEXT)}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Cicalese, Joumblatt, Rossi, Buob, Aug{\'e},
+  and Friedman}{Cicalese et~al\mbox{.}}{2015b}]%
+        {cicalese2015fistful}
+\bibfield{author}{\bibinfo{person}{Danilo Cicalese}, \bibinfo{person}{Diana
+  Joumblatt}, \bibinfo{person}{Dario Rossi}, \bibinfo{person}{Marc-Olivier
+  Buob}, \bibinfo{person}{Jordan Aug{\'e}}, {and} \bibinfo{person}{Timur
+  Friedman}.} \bibinfo{year}{2015}\natexlab{b}.
+\newblock \showarticletitle{{A Fistful of Pings: Accurate and Lightweight
+  Anycast Enumeration and Geolocation}}. In \bibinfo{booktitle}{\emph{IEEE
+  INFOCOM}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Cicalese and Rossi}{Cicalese and
+  Rossi}{2018}]%
+        {cicalese2018longitudinal}
+\bibfield{author}{\bibinfo{person}{Danilo Cicalese} {and}
+  \bibinfo{person}{Dario Rossi}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{A Longitudinal Study of IP Anycast}}.
+\newblock \bibinfo{journal}{\emph{ACM SIGCOMM Computer Communication Review}}
+  \bibinfo{volume}{48(1)} (\bibinfo{year}{2018}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{de~Oliveira~Schmidt, Heidemann, and
+  Kuipers}{de~Oliveira~Schmidt et~al\mbox{.}}{2017}]%
+        {de2017anycast}
+\bibfield{author}{\bibinfo{person}{Ricardo de Oliveira~Schmidt},
+  \bibinfo{person}{John Heidemann}, {and} \bibinfo{person}{Jan~Harm Kuipers}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{{Anycast Latency: How Many Sites Are Enough?}}. In
+  \bibinfo{booktitle}{\emph{Passive and Active Network Measurement (PAM)}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{de~Vries, de~O.~Schmidt, Hardaker, Heidemann,
+  de~Boer, and Pras}{de~Vries et~al\mbox{.}}{2017}]%
+        {deVries:2017}
+\bibfield{author}{\bibinfo{person}{Wouter~B. de Vries},
+  \bibinfo{person}{Ricardo de O.~Schmidt}, \bibinfo{person}{Wes Hardaker},
+  \bibinfo{person}{John Heidemann}, \bibinfo{person}{Pieter-Tjerk de Boer},
+  {and} \bibinfo{person}{Aiko Pras}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{{Broad and Load-aware Anycast Mapping with
+  Verfploeter}}. In \bibinfo{booktitle}{\emph{ACM Internet Measurement
+  Conference (IMC)}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{DNS Root Sever Anycast Trace Data. University
+  of Maryland}}{{DNS Root Sever Anycast Trace Data. University of
+  Maryland}}{2018}]%
+        {UMD_anycast}
+\bibfield{author}{\bibinfo{person}{{DNS Root Sever Anycast Trace Data.
+  University of Maryland}}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock
+  \bibinfo{howpublished}{\url{http://www.cs.umd.edu/projects/droot/anycast-data.tar.gz}}.
+    (\bibinfo{year}{2018}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Fan, Heidemann, and Govindan}{Fan
+  et~al\mbox{.}}{2013}]%
+        {fan2013}
+\bibfield{author}{\bibinfo{person}{Xun Fan}, \bibinfo{person}{John Heidemann},
+  {and} \bibinfo{person}{Ramesh Govindan}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{{Evaluating Anycast in the Domain Name System}}. In
+  \bibinfo{booktitle}{\emph{IEEE INFOCOM}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Giordano, Cicalese, Finamore, Mellia,
+  Munaf{\`o}, Joumblatt, and Rossi}{Giordano et~al\mbox{.}}{2016}]%
+        {giordano2016first}
+\bibfield{author}{\bibinfo{person}{Danilo Giordano}, \bibinfo{person}{Danilo
+  Cicalese}, \bibinfo{person}{Alessandro Finamore}, \bibinfo{person}{Marco
+  Mellia}, \bibinfo{person}{Maurizio Munaf{\`o}},
+  \bibinfo{person}{Diana~Zeaiter Joumblatt}, {and} \bibinfo{person}{Dario
+  Rossi}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{A First Characterization of Anycast Traffic from
+  Passive Traces}}. In \bibinfo{booktitle}{\emph{Network Traffic Measurement
+  and Analysis Conference (TMA)}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Hao, Zhang, Wang, and Stavrou}{Hao
+  et~al\mbox{.}}{2018}]%
+        {hao2018}
+\bibfield{author}{\bibinfo{person}{Shuai Hao}, \bibinfo{person}{Yubao Zhang},
+  \bibinfo{person}{Haining Wang}, {and} \bibinfo{person}{Angelos Stavrou}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{End-Users Get Maneuvered: Empirical Analysis of
+  Redirection Hijacking in Content Delivery Networks}}. In
+  \bibinfo{booktitle}{\emph{USENIX Security Symposium}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{IXP P}eering {O}bservatory}{{IXP P}eering
+  {O}bservatory}{2018}]%
+        {RPJedi}
+\bibfield{author}{\bibinfo{person}{Remote {IXP P}eering {O}bservatory}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{howpublished}{\url{http://remote-ixp-peering.net/}}.
+  (\bibinfo{year}{2018}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Li, Levin, Spring, and Bhattacharjee}{Li
+  et~al\mbox{.}}{2018}]%
+        {li2018internet}
+\bibfield{author}{\bibinfo{person}{Zhihao Li}, \bibinfo{person}{Dave Levin},
+  \bibinfo{person}{Neil Spring}, {and} \bibinfo{person}{Bobby Bhattacharjee}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{Internet Anycast: Performance, Problems, \&
+  Potential}}. In \bibinfo{booktitle}{\emph{ACM SIGCOMM}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Madory, Cook, and Miao}{Madory
+  et~al\mbox{.}}{2013}]%
+        {madory2013anycasters}
+\bibfield{author}{\bibinfo{person}{Doug Madory}, \bibinfo{person}{Chris Cook},
+  {and} \bibinfo{person}{Kevin Miao}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{{Who Are the Anycasters}}.
+\newblock \bibinfo{journal}{\emph{NANOG59}} (\bibinfo{year}{2013}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{MaxMind's GeoLite City Dataset}}{{MaxMind's
+  GeoLite City Dataset}}{2018}]%
+        {MaxMind}
+\bibfield{author}{\bibinfo{person}{{MaxMind's GeoLite City Dataset}}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock
+  \bibinfo{howpublished}{\url{https://dev.maxmind.com/geoip/geoip2/geolite2/}}.
+    (\bibinfo{year}{2018}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Moura, Schmidt, Heidemann, de~Vries, Muller,
+  Wei, and Hesselman}{Moura et~al\mbox{.}}{2016}]%
+        {moura2016anycast}
+\bibfield{author}{\bibinfo{person}{Giovane Moura}, \bibinfo{person}{Ricardo
+  de~O Schmidt}, \bibinfo{person}{John Heidemann}, \bibinfo{person}{Wouter~B de
+  Vries}, \bibinfo{person}{Moritz Muller}, \bibinfo{person}{Lan Wei}, {and}
+  \bibinfo{person}{Cristian Hesselman}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{Anycast vs. DDoS: Evaluating the November 2015
+  root DNS event}}. In \bibinfo{booktitle}{\emph{ACM Internet Measurement
+  Conference (IMC)}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Nomikos and Dimitropoulos}{Nomikos and
+  Dimitropoulos}{2016}]%
+        {traixroute:pam}
+\bibfield{author}{\bibinfo{person}{George Nomikos} {and}
+  \bibinfo{person}{Xenofontas Dimitropoulos}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{traIXroute: Detecting IXPs in traceroute paths}}.
+  In \bibinfo{booktitle}{\emph{Passive and Active Network Measurement (PAM)}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Nomikos, Kotronis, Sermpezis, Gigis,
+  Manassakis, Dietzel, Konstantaras, Dimitropoulos, and Giotsas}{Nomikos
+  et~al\mbox{.}}{2018}]%
+        {Nomikos18}
+\bibfield{author}{\bibinfo{person}{Georgios Nomikos},
+  \bibinfo{person}{Vasileios Kotronis}, \bibinfo{person}{Pavlos Sermpezis},
+  \bibinfo{person}{Petros Gigis}, \bibinfo{person}{Lefteris Manassakis},
+  \bibinfo{person}{Christoph Dietzel}, \bibinfo{person}{Stavros Konstantaras},
+  \bibinfo{person}{Xenofontas Dimitropoulos}, {and} \bibinfo{person}{Vasileios
+  Giotsas}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{O Peer, Where Art Thou?: Uncovering Remote Peering
+  Interconnections at IXPs}}. In \bibinfo{booktitle}{\emph{ACM Internet
+  Measurement Conference (IMC)}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Orsini, King, Giordano, Giotsas, and
+  Dainotti}{Orsini et~al\mbox{.}}{2016}]%
+        {orsini2016bgpstream}
+\bibfield{author}{\bibinfo{person}{Chiara Orsini}, \bibinfo{person}{Alistair
+  King}, \bibinfo{person}{Danilo Giordano}, \bibinfo{person}{Vasileios
+  Giotsas}, {and} \bibinfo{person}{Alberto Dainotti}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{BGPStream: a Software Framework for Live and
+  Historical BGP Data Analysis}}. In \bibinfo{booktitle}{\emph{ACM Internet
+  Measurement Conference (IMC)}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Rekhter, Li, and Hares}{Rekhter
+  et~al\mbox{.}}{2006}]%
+        {rekhter2005border}
+\bibfield{author}{\bibinfo{person}{Yakov Rekhter}, \bibinfo{person}{Tony Li},
+  {and} \bibinfo{person}{Susan Hares}.} \bibinfo{year}{2006}\natexlab{}.
+\newblock \bibinfo{title}{{A Border Gateway Protocol 4 (BGP-4)}}.
+\newblock \bibinfo{howpublished}{RFC 4271}.   (\bibinfo{year}{2006}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{RIPE Atlas}}{{RIPE Atlas}}{[n. d.]}]%
+        {RIPE_Atlas}
+\bibfield{author}{\bibinfo{person}{{RIPE Atlas}}.} \bibinfo{year}{[n.
+  d.]}\natexlab{}.
+\newblock \bibinfo{howpublished}{\url{https://atlas.ripe.net}}.
+  (\bibinfo{year}{[n. d.]}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{RIPE Geoloc}}{{RIPE Geoloc}}{[n. d.]}]%
+        {RIPE_GEO}
+\bibfield{author}{\bibinfo{person}{{RIPE Geoloc}}.} \bibinfo{year}{[n.
+  d.]}\natexlab{}.
+\newblock \bibinfo{howpublished}{\url{https://stat.ripe.net/widget/geoloc}}.
+  (\bibinfo{year}{[n. d.]}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{RIPE RIS}}{{RIPE RIS}}{[n. d.]}]%
+        {RIPE_RIS}
+\bibfield{author}{\bibinfo{person}{{RIPE RIS}}.} \bibinfo{year}{[n.
+  d.]}\natexlab{}.
+\newblock
+  \bibinfo{howpublished}{\url{https://www.ripe.net/analyse/internet-measurements/routing-information-service-ris}}.
+    (\bibinfo{year}{[n. d.]}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{Root DNS Servers}}{{Root DNS Servers}}{[n.
+  d.]}]%
+        {RootDNS}
+\bibfield{author}{\bibinfo{person}{{Root DNS Servers}}.} \bibinfo{year}{[n.
+  d.]}\natexlab{}.
+\newblock \bibinfo{howpublished}{\url{http://www.root-servers.org/}}.
+  (\bibinfo{year}{[n. d.]}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{Route Views Project}}{{Route Views
+  Project}}{[n. d.]}]%
+        {Routeviews}
+\bibfield{author}{\bibinfo{person}{{Route Views Project}}.} \bibinfo{year}{[n.
+  d.]}\natexlab{}.
+\newblock \bibinfo{howpublished}{\url{http://www.routeviews.org/}}.
+  (\bibinfo{year}{[n. d.]}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{Scikit-Learn: Machine Learning Library for
+  the Python}}{{Scikit-Learn: Machine Learning Library for the Python}}{[n.
+  d.]}]%
+        {Scikit-learn}
+\bibfield{author}{\bibinfo{person}{{Scikit-Learn: Machine Learning Library for
+  the Python}}.} \bibinfo{year}{[n. d.]}\natexlab{}.
+\newblock \bibinfo{howpublished}{\url{http://scikit-learn.org/}}.
+  (\bibinfo{year}{[n. d.]}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{traIXroute}}{{traIXroute}}{2018}]%
+        {traixroute}
+\bibfield{author}{\bibinfo{person}{{traIXroute}}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{howpublished}{\url{https://github.com/gnomikos/traIXroute}}.
+    (\bibinfo{year}{2018}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Wei and Heidemann}{Wei and Heidemann}{2017}]%
+        {wei2018does}
+\bibfield{author}{\bibinfo{person}{Lan Wei} {and} \bibinfo{person}{John
+  Heidemann}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{{Does Anycast Hang up on You?}}. In
+  \bibinfo{booktitle}{\emph{Network Traffic Measurement and Analysis Conference
+  (TMA)}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Zhang, Goel, and Govindan}{Zhang
+  et~al\mbox{.}}{2005}]%
+        {Zhang:2005}
+\bibfield{author}{\bibinfo{person}{Hui Zhang}, \bibinfo{person}{Ashish Goel},
+  {and} \bibinfo{person}{Ramesh Govindan}.} \bibinfo{year}{2005}\natexlab{}.
+\newblock \showarticletitle{An Empirical Evaluation of Internet Latency
+  Expansion}.
+\newblock \bibinfo{journal}{\emph{ACM SIGCOMM Computer Communication Review}}
+  \bibinfo{volume}{35}, \bibinfo{number}{1} (\bibinfo{date}{Jan.}
+  \bibinfo{year}{2005}).
+\newblock
+
+
+\end{thebibliography}

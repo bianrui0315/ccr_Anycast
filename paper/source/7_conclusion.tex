@@ -1,0 +1,26 @@
+%!TEX root = main_acm.tex
+
+\section{Conclusion}
+\label{sec:con}
+
+We presented a passive method to study IP anycast by utilizing BGP data.  We
+proposed a set of BGP-related features (thus not based on active measurements)
+to classify anycast and unicast prefixes. Extracting data from RouteViews and
+RIPE RIS, we evaluated the effectiveness of our proposed approach against a
+near-ground-truth dataset based on active-probing
+measurements~\cite{cicalese2015characterizing}. The evaluation results show that
+our approach achieves high classification accuracy---about 90\% for anycast and
+99\% for unicast---and is also able to detect anycast prefixes incorrectly
+labeled as unicast in the near-ground-truth dataset. 
+
+In addition, while delving into the causes of inaccuracy, we found indication
+that remote peering might have an unintended impact on anycast routing. We
+investigated this phenomenon by combining regular traceroutes, measurements
+executed with the traIXroute~\cite{traixroute, traixroute:pam} open-source tool,
+BGP data from RouteViews and RIPE RIS, and data from the Remote IXP Peering
+Observatory \cite{RPJedi}.  Our study showed that remote peering has the
+potential to affect 19.2\% of the anycast prefixes and we confirmed via
+traceroute measurements that around 40\% of such prefixes were indeed impacted
+by remote peering.  We also revealed that remote peering could increase
+transmission latency by routing traffic to distant suboptimal anycast sites.
+

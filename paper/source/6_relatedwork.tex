@@ -1,0 +1,25 @@
+%!TEX root = main_acm.tex
+
+\section{Related Work}
+\label{sec:rel}
+Anycast deployment and performance have been characterized and evaluated by different active probing methods. Madory \emph{et al.}~\cite{madory2013anycasters} use geolocation of transit IP and geo-inconsistency to detect anycast prefixes. Cicalese \emph{et al.} ~\cite{cicalese2015characterizing, cicalese2015fistful, cicalese2018longitudinal} propose a method for enumeration and geolocation of anycast instances based on latency measurements. Vries \emph{et al.}~\cite{deVries:2017} propose a method that maps anycast catchments via active probes to provide better coverage. 
+
+\textbf{Anycast-based Internet Services}.
+Fan \emph{et al.} ~\cite{fan2013} combine the CHAOS queries with traceroutes and use new IN records to support open recursive DNS servers as vantage points to detect and study anycast-based DNS infrastructures.
+Calder \emph{et al.} ~\cite{Calder:2015} study the performance of an anycast CDN and find that some clients are directed to a sub-optimal front-end.
+Moura \emph{et al.} ~\cite{moura2016anycast} study the Nov. 2015 event of Root DNS attacked by DDoS from the anycast's perspective. 
+Giordano \emph{et al.}~\cite{giordano2016first} perform a passive characterization study on anycast traffic in CDNs and present temporal properties, service diversity, and deployments of anycast traffic.
+
+Schmidt \emph{et al.} ~\cite{de2017anycast} investigate the relationship between IP anycast and latency from four Root DNS nameservers. Their key results show that geographic location and connectivity have a stronger impact on latency than the number of sites. 
+Li \emph{et al.}~\cite{li2018internet} perform a study on anycast's route selection and performance using D-root Server traces, and they validate that equal-length AS paths are the main reason for anycast latency inflation.
+Wei \emph{et al.}~\cite{wei2018does} study the service (in)stability of anycast services. They confirm that a small number of users are affected by the instability of anycast, potentially caused by the load balancers on the path.
+
+\textbf{Remote Peering}.
+Castro \emph{et al.}~\cite{castro2014remote} present a systematic study of remote peering at IXPs using ping-based methods. They discuss the impact of remote peering on Internet reliability, security, and economies.
+Nomikos \emph{et al.}~\cite{Nomikos18} perform a comprehensive measurement study
+of remote peering, and they achieve very high accuracy and coverage levels by
+combining RTT measurements with other domain-specific information like facility
+locations, IXP port capacity, and private connectivity. They study the features
+and trends of remote peering, showing that remote peering may route traffic to
+more distant destinations. Their work does not focus on anycast prefixes though.
+
