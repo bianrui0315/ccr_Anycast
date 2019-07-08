@@ -45,7 +45,7 @@ prefix in groundtruth|prefix in BGP|origin AS|number of orgin AS|number of upstr
 - `atlas_exp_prefix_msmid.txt`: Measurement ID of [RIPE Atlas](https://atlas.ripe.net/)
 - `inferences_all.txt`: information including local and remote peering from IMC'18 remote peering paper
 - `inferences_remote.txt`: remote peering information from IMC'18 remote peering paper
-- `traceroute_prefix_ip_path.txt`: traceroute results from RIPE Atlas experiments
+- `traceroute_prefix_ip_path.txt`: traceroute results (IP paths) from RIPE Atlas experiments
 - `traceroute_prefix_asn_pyasn.txt`: ASN paths from RIPE Atlas experiments
 - `path collection`: path collection results from RIPE Atlas traceroute experiments
 
