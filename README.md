@@ -8,7 +8,9 @@
 
 We developed a passive method to study IP anycast by utilizing BGP data.
 We proposed a set of BGP-related features to classify anycast/unicast prefixes by using the BGP data (RouteViews and RIPE RIS) and evaluated the effectiveness of our approach by using the active measurement results as a near-ground-truth. The results show that 
-our approach achieves high classification accuracy, about 90\% for anycast and 99\% for unicast. While further delving into the causes of inaccuracy, we found that remote peering has an unintended impact on anycast routing, due to its invisibility at layer-3, breaking the assumption that the peered autonomous systems are physically close and provide a short path. In our study, 19.2\% of anycast prefixes are sensitive to remote peering and around 40\% of such prefixes are further confirmed to be impacted by remote peering via traceroute measurements. [[paper](https://github.com/bianrui0315/ccr_Anycast/blob/master/paper/pdf-sigcomm-ccr19.pdf)]
+our approach achieves high classification accuracy, about 90\% for anycast and 99\% for unicast. 
+
+While further delving into the causes of inaccuracy, we found that remote peering has an unintended impact on anycast routing, due to its invisibility at layer-3, breaking the assumption that the peered autonomous systems are physically close and provide a short path. In our study, 19.2\% of anycast prefixes are sensitive to remote peering and around 40\% of such prefixes are further confirmed to be impacted by remote peering via traceroute measurements. [[paper](https://github.com/bianrui0315/ccr_Anycast/blob/master/paper/pdf-sigcomm-ccr19.pdf)]
 
 ## scripts
 - `construct_datasets.py`: construct datasets for classification
