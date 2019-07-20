@@ -10,10 +10,10 @@ We developed a passive method to study IP anycast by utilizing BGP data.
 We proposed a set of BGP-related features to classify anycast/unicast prefixes by using the BGP data (RouteViews and RIPE RIS) and evaluated the effectiveness of our approach by using the active measurement results as a near-ground-truth. The results show that 
 our approach achieves high classification accuracy, about 90\% for anycast and 99\% for unicast. 
 
-While further delving into the causes of inaccuracy, we found that remote peering has an unintended impact on anycast routing, due to its invisibility at layer-3, breaking the assumption that the peered autonomous systems are physically close and provide a short path. In our study, 19.2\% of anycast prefixes are sensitive to remote peering and around 40\% of such prefixes are further confirmed to be impacted by remote peering via traceroute measurements. [[paper](https://github.com/bianrui0315/ccr_Anycast/blob/master/paper/pdf-sigcomm-ccr19.pdf)]
+While further delving into the causes of inaccuracy, we found that remote peering has an unintended impact on anycast routing, due to its invisibility at layer-3, breaking the assumption that the peered autonomous systems are physically close and provide a short path. In our study, 19.2\% of anycast prefixes are sensitive to remote peering and around 40\% of such prefixes are further confirmed to be impacted by remote peering via traceroute measurements. [[paper](https://github.com/bianrui0315/ccr_Anycast/blob/master/paper/acmdl19-306.pdf)]
 
 ## scripts
-- `construct_datasets.py`: construct datasets for classification from `full_results_anycast.txt` and `full_results_unicast.txt`  and datasets contain five features ```N, P1, P2, MD, ML```, details in [paper](https://github.com/bianrui0315/ccr_Anycast/blob/master/paper/pdf-sigcomm-ccr19.pdf) §3.2
+- `construct_datasets.py`: construct datasets for classification from `full_results_anycast.txt` and `full_results_unicast.txt`  and datasets contain five features ```N, P1, P2, MD, ML```, details in [paper](https://github.com/bianrui0315/ccr_Anycast/blob/master/paper/acmdl19-306.pdf) §3.2
 - `extract_asrelation_distance.py`: process raw BGP file (BGP data from RouteViews and RIPE RIS from June 1st 00:00 UTC to June 1st 23:59 UTC) and extract the distance of ASes
 - `process_anycast_to_get_complete_data.py`: process BGP data (BGP data from RouteViews and RIPE RIS from June 1st 00:00 UTC to June 1st 23:59 UTC) and extract BGP features
 - `process_data_mulway_ris.py`: process raw BGP data, extract origin/upstream ASes, and the distance of upstream ASes for each prefix
@@ -46,6 +46,6 @@ prefix in groundtruth|prefix in BGP|origin AS|number of orgin AS|number of upstr
 - `inferences_remote.txt`: remote peering information from IMC'18 remote peering paper
 - `traceroute_prefix_ip_path.txt`: traceroute results (IP paths) from RIPE Atlas experiments
 - `traceroute_prefix_asn_pyasn.txt`: ASN paths from RIPE Atlas experiments
-- `path collection`: path collection (details in [paper](https://github.com/bianrui0315/ccr_Anycast/blob/master/paper/pdf-sigcomm-ccr19.pdf) §5.2) results from RIPE Atlas traceroute experiments
+- `path collection`: path collection (details in [paper](https://github.com/bianrui0315/ccr_Anycast/blob/master/paper/acmdl19-306.pdf) §5.2) results from RIPE Atlas traceroute experiments
 
 Due to limit of size, we didn't include large files like BGP data, which can be downloaded from RouteView/RIPE NCC, or retrieved from CAIDA's [BGPStream](https://bgpstream.caida.org/). If you need those files to reproduce your results, we have included the method in our paper and feel free to contact us by email (bianrui@udel.edu).
